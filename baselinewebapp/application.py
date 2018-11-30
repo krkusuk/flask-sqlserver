@@ -23,6 +23,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = conDEBUG
 
 db = SQLAlchemy(app)
 
+@app.route("/heartbeat")
+def index():
+    return "Baseline web is alive!"
+
 @app.route("/")
 def index():
     from models.algorithms import Algorithm
