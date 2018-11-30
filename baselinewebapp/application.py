@@ -24,7 +24,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = conDEBUG
 db = SQLAlchemy(app)
 
 @app.route("/heartbeat")
-def index():
+def heartbeat():
     return "Baseline web is alive!"
 
 @app.route("/")
