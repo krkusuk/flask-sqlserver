@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Success{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+Operation Not successful .
+Error = {{ error }}
+
+<a href='/' class = 'btn btn-default' >Go Home</button>
+{% endblock %}

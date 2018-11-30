@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %} Add Algo {% endblock %}
+{% block content %}
+    <h1>Add new algo</h1>
+    <form action='/addalgo' method='POST'>
+        <label for="algonamefield">Name</label>
+        <input type = 'text' class='form-control' id='algonamefield' name='algoname' placeholder="New Algo Name">
+
+        <label for="grainfield">Grain in minutes</label>
+        <input type = 'number' class='form-control' id='grainfield' name='grain' placeholder="60">
+
+        <button type='submit' class = 'btn btn-default' > Submit </button>
+    </form>
+{% endblock %}

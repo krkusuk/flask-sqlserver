@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Baseline Algorithms{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+<h2>Baseline Prediction Algorithms</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Grain in minutes</th>
+        </tr>
+    </thead>
+    {% for algo in algos %}
+    <tr>
+        <td>{{ algo.id}}</td>
+        <td>{{ algo.name}}</td>
+        <td>{{ algo.grain_in_minutes}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p >
+    <a href="/addalgo" class="btn btn-default">Add Algo</a>
+</p>
+{% endblock %}
