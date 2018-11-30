@@ -5,7 +5,7 @@ import os,urllib
 
 
 app= Flask(__name__)
-
+app.config['DEBUG'] = True
 conDEBUG = 'DRIVER={SQL Server};'+'Database={dbname};SERVER={dbhost};UID={dbuser};PWD={dbpass}'.format(
     
     dbname=os.environ['DBNAME'],
